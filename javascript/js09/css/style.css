@@ -1,0 +1,167 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo do corpo da página */
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container principal (#app) */
+#app {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do campo de entrada */
+#inputTarefa {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+#inputTarefa::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#inputTarefa:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Estilo do botão */
+#botaoRegistrar, #botaoMostrarRealizadas, #botaoExportarPDF {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+#botaoRegistrar {
+    background: #ff6f61;
+}
+
+#botaoRegistrar:hover {
+    background: #ff4a3d;
+    transform: translateY(-2px);
+}
+
+#botaoRegistrar:active {
+    transform: translateY(0);
+}
+
+#botaoMostrarRealizadas {
+    background: #6c757d;
+}
+
+#botaoMostrarRealizadas:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+#botaoMostrarRealizadas:active {
+    transform: translateY(0);
+}
+
+#botaoExportarPDF {
+    background: #28a745; /* Verde vibrante */
+}
+
+#botaoExportarPDF:hover {
+    background: #218838; /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+#botaoExportarPDF:active {
+    transform: translateY(0);
+}
+
+/* Ícone de download (usando Font Awesome) */
+#botaoExportarPDF i {
+    font-size: 18px;
+}
+
+/* Estilo da lista de tarefas */
+#listaTarefas, #listaTarefasRealizadas {
+    margin-top: 20px;
+    list-style: none;
+}
+
+#listaTarefas li, #listaTarefasRealizadas li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#listaTarefas li:hover, #listaTarefasRealizadas li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+/* Estilo para o texto das tarefas */
+#listaTarefas li span, #listaTarefasRealizadas li span {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Estilo para os botões de ação */
+#listaTarefas li button, #listaTarefasRealizadas li button {
+    background: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 10px;
+}
+
+#listaTarefas li button:hover, #listaTarefasRealizadas li button:hover {
+    background: #ff4a3d;
+}
+
+/* Estilo para tarefas realizadas */
+#listaTarefasRealizadas li {
+    background: rgba(0, 255, 0, 0.1); /* Verde suave para tarefas realizadas */
+}
+
+/* Classe para ocultar elementos */
+.hidden {
+    display: none;
+}
